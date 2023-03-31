@@ -1,24 +1,153 @@
 *,
-* + * {
+*+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0 10px;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
 
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
     line-height: 60px;
     color: #000000;
+
+    overflow-x: hidden;
 }
 
 .container {
-    max-width: 1900px;
+    max-width: 1920px;
     width: 100%;
     margin: 0 auto;
+}
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #000000;
+}
+
+.header__container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.footer__container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+.main-content__container {
+    max-width: 1725px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo-wrpaper {
+    margin-right: 179px;
+}
+
+.header-name {
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 65px;
+}
+
+.header-list__links {
+    display: flex;
+    list-style: none;
+}
+
+.header-nav__link {
+    margin-right: 64px;
+}
+
+
+.header-nav__link .link-active {
+    text-decoration: dashed;
+}
+
+.main{
+    padding-top: 71px;
+}
+
+.bg-img {
+    background-image: url(../assets/main-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+
+.content__text {
+    margin-bottom: 54px;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.site-wrapper {
+    margin-bottom: 81px;
+}
+
+.site-wrapper__title {
+    margin-bottom: 20px;
+}
+
+.site-list {
+    padding-left: 67px;
+}
+
+.tech-wrapper {
+    margin-bottom: 93px;
+}
+
+.eco-wrapper {
+    margin-bottom: 168px;
+}
+
+.eco-list {
+    padding-left: 67px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 30px;
+    line-height: 30px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    background-color: #C2E7D5;
+    padding: 27px 0 50px;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 70%;
+}
+
+.footer-text * {
+    margin-bottom: 10px;
+}
+
+.footer-text *:last-child {
+    margin-bottom: 0;
+}
+
+.footer a {
+    display: block;
 }
