@@ -12,6 +12,13 @@
     background-size: contain; */
 }
 
+body {
+    background-image: url("../assets/test-bg-3.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
 
 .page-title {
     font-weight: 400;

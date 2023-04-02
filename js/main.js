@@ -38,9 +38,11 @@ function checkOption() {
 
     if(selectedOption.value === 'Большие кабаны') {
         test.style.cssText = 'display: none;';
+        observatoryText.style.cssText = 'display: none;';
         boarText.style.cssText = 'display: block;';
     } else {
         boarText.style.cssText = 'display: none;';
+
     }
 
 

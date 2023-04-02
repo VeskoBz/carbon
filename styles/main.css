@@ -41,6 +41,10 @@ body {
     color: #000000;
 
     overflow-x: hidden;
+
+    background-image: url("../assets/test-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
