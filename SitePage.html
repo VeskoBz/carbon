@@ -23,8 +23,7 @@
     <div class="header__container">
         <div class="logo-wrapper">
             <a href="#" style="display: flex; align-items: center">
-                <img src="./assets/logo-main.svg" class="header-logo__img" alt="Carbon Logotype">
-                <p class="header-name">«Карбон-Поволжье»</p>
+                <img src="./assets/carbon-logo.svg" class="header-logo__img" alt="Carbon Logotype">
             </a>
 
         </div>
@@ -43,18 +42,35 @@
                     <li>
                         <a class="header-nav__link" href="./SitePage.html">Участки</a>
                     </li>
+                    <li onclick="error(event)">
+                        <a class="header-nav__link" href="#">Мероприятия</a>
+                    </li>
                 </ul>
             </nav>
         </div>
 
         <div class="header-buttons">
-            <button class="header-btn ">Записаться</button>
-
-            <div class="sign-up__wrapper">
-
+            <div class="cancel-btn__wrapper">
+                <button onclick="testingBtn()" id="showModal" class="header-btn ">Связаться с нами!</button>
             </div>
 
-            <button class="header-btn ">Мероприятия</button>
+
+            <div id="modalTest" class="modal-test">
+                <button id="cancel" class="cancel-btn">
+                    <img src="./assets/cancel-icon.svg" alt="">
+                </button>
+                <label>
+                    <h3>Укажите свою почту:</h3>
+
+                    <input type="email" class="cancel-input" placeholder="Введите адрес электронной почты">
+                </label>
+
+
+                <button id="send-data" class="send-data">
+                    Отправить данные
+                </button>
+
+            </div>
         </div>
     </div>
 </header>
@@ -193,10 +209,43 @@
             </div>
         </main>
     </div>
-    <footer class="footer">
-        <div class="footer__container">
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer-logo">
+            <a href="#" style="display: flex; align-items: center">
+                <img src="./assets/carbon-logo.svg" class="footer-logo__img" alt="Carbon Logotype">
+            </a>
+            <a href="#" style="display: flex; align-items: center">
+                <img src="./assets/logo-minProm.svg" class="footer-logo__img" alt="Carbon Logotype">
+            </a>
+        </div>
+
+        <div class="footer-nav">
+            <nav class="nav">
+                <h4>Разделы</h4>
+                <ul class="header-list__links footer-list">
+                    <li>
+                        <a class="header-nav__link" href="./MainPage.html">Главная</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link" href="./AboutPage.html">О проекте</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link" href="./NewsPage.html">Новости</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link" href="./SitePage.html">Участки</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link" href="./SitePage.html">Мероприятия</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-info">
             <div class="footer-text">
-                <span style="font-weight: 600;">Оператор полигона</span>
+                <h4>Оператор полигона</h4>
                 <p>
                     Данис Карлович Нургалиев
                 </p>
@@ -206,7 +255,8 @@
                 <a href="tel:+78422337401">+7 842 233 74 01</a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
     <script src="./js/main.js"></script>
 </body>
 

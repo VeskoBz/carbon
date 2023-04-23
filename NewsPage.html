@@ -23,8 +23,7 @@
     <div class="header__container">
         <div class="logo-wrapper">
             <a href="#" style="display: flex; align-items: center">
-                <img src="./assets/logo-main.svg" class="header-logo__img" alt="Carbon Logotype">
-                <p class="header-name">«Карбон-Поволжье»</p>
+                <img src="./assets/carbon-logo.svg" class="header-logo__img" alt="Carbon Logotype">
             </a>
 
         </div>
@@ -43,18 +42,35 @@
                     <li>
                         <a class="header-nav__link" href="./SitePage.html">Участки</a>
                     </li>
+                    <li onclick="error(event)">
+                        <a class="header-nav__link" href="#">Мероприятия</a>
+                    </li>
                 </ul>
             </nav>
         </div>
 
         <div class="header-buttons">
-            <button class="header-btn ">Записаться</button>
-
-            <div class="sign-up__wrapper">
-
+            <div class="cancel-btn__wrapper">
+                <button onclick="testingBtn()" id="showModal" class="header-btn ">Связаться с нами!</button>
             </div>
 
-            <button class="header-btn ">Мероприятия</button>
+
+            <div id="modalTest" class="modal-test">
+                <button id="cancel" class="cancel-btn">
+                    <img src="./assets/cancel-icon.svg" alt="">
+                </button>
+                <label>
+                    <h3>Укажите свою почту:</h3>
+
+                    <input type="email" class="cancel-input" placeholder="Введите адрес электронной почты">
+                </label>
+
+
+                <button id="send-data" class="send-data">
+                    Отправить данные
+                </button>
+
+            </div>
         </div>
     </div>
 </header>
@@ -88,24 +104,99 @@
                             </p>
                         </div>
                     </div>
+                    <div class="separate-news">
+                        <img width="595px" src="./assets/news-2023-04-07.jpg" alt="Eddy Covariance">
+                        <div class="separate-news__text">
+                            <p class="news-text">
+                                <b>Работы ведутся совместно с Климатическим центром Новосибирского государственного университета. Представители ТюмГУ пройдут обучение по расчету баланса климатически активных газов от разных видов промышленности, предложат первую версию углеродного баланса Тюменской области.</b><br>
+                                Подготовка и последующая верификация баланса парниковых газов Тюменской области станет неотъемлемой частью исследований потенциала региона в части снижения их эмиссии. Уточнение текущего положения дел в системообразующих отраслях и определение "базовой линии" позволит выработать научно-обоснованные рекомендации по снижению выбросов парниковых газов, будет способствовать решению актуальных задач климатической политики региона.
+                            </p>
+                            <p class="custom-date">
+                                07.04.23
+                            </p>
+                        </div>
+                    </div>
+                    <div class="separate-news">
+
+                        <div class="separate-news__text custom-text">
+                            <p class="news-text">
+                              <b>  Пилотный проект карбоновых полигонов Министерства науки и высшего образования Российской Федерации направлен на решение задач оценки баланса потоков парниковых газов для различных экосистем России и на развитие технологий, направленных на секвестрацию парниковых газов.</b>
+                                <br>
+                                Для решения задачи построения эффективной системы мониторинга климатически активных газов и её обеспечения эффективными технологиями и методиками на территории России Министерство науки и высшего образования Российской Федерации в 2021 году начало реализовывать проект создания сети научно‐образовательных полигонов для разработки, испытания и валидации технологий количественной оценки потенциалов эмиссии и секвестрования различными типами экосистем. Стратегическая цель пилотного проекта — оценить потенциал российских экосистем в части обеспечения секвестрации климатически активных газов.
+                            </p>
+                            <p class="news-date custom-date2">
+                                03.03.23
+                            </p>
+                        </div>
+                        <img src="./assets/Carbon-polygons-handout-2022-cover.png" alt="Eddy Covariance">
+                    </div>
+                    <div class="separate-news">
+                        <img src="./assets/news-2023-04-06.jpg" alt="Eddy Covariance">
+                        <div class="separate-news__text">
+                            <p class="news-text">
+                               <b>
+                                   «Роснефть» организовала семинар, посвященный научным и правовым аспектам реализации лесоклиматических проектов, которые направлены на увеличение поглощения парниковых газов.
+                                   <br>
+                               </b>
+                                Роснефть, представители Санкт-Петербургского государственного лесотехнического университета им. С.М. Кирова, Сибирского федерального университета, Санкт-Петербургского научно-исследовательского института лесного хозяйства, Рослесхоза, Минэкономразвития России и Правительства Красноярского края по итогам научно-практического семинара в рамках реализации лесоклиматического проекта в Красноярском крае на основе анализа мирового и отечественного опыта сформулировали дополнительные предложения
+                            </p>
+                            <p class="news-date">
+                                03.03.23
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
 
-        <footer class="footer">
-            <div class="footer__container">
-                <div class="footer-text">
-                    <span style="font-weight: 600;">Оператор полигона</span>
-                    <p>
-                        Данис Карлович Нургалиев
-                    </p>
-                </div>
-                <div class="footer-text">
-                    <a href="https://kpfu.ru">https://kpfu.ru</a>
-                    <a href="tel:+78422337401">+7 842 233 74 01</a>
-                </div>
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer-logo">
+            <a href="#" style="display: flex; align-items: center">
+                <img src="./assets/carbon-logo.svg" class="footer-logo__img" alt="Carbon Logotype">
+            </a>
+            <a href="#" style="display: flex; align-items: center">
+                <img src="./assets/logo-minProm.svg" class="footer-logo__img" alt="Carbon Logotype">
+            </a>
+        </div>
+
+        <div class="footer-nav">
+            <nav class="nav">
+                <h4>Разделы</h4>
+                <ul class="header-list__links footer-list">
+                    <li>
+                        <a class="header-nav__link" href="./MainPage.html">Главная</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link" href="./AboutPage.html">О проекте</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link" href="./NewsPage.html">Новости</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link" href="./SitePage.html">Участки</a>
+                    </li>
+                    <li>
+                        <a class="header-nav__link" href="./SitePage.html">Мероприятия</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-info">
+            <div class="footer-text">
+                <h4>Оператор полигона</h4>
+                <p>
+                    Данис Карлович Нургалиев
+                </p>
             </div>
-        </footer>
+            <div class="footer-text">
+                <a href="https://kpfu.ru">https://kpfu.ru</a>
+                <a href="tel:+78422337401">+7 842 233 74 01</a>
+            </div>
+        </div>
+    </div>
+</footer>
     <script src="./js/main.js"></script>
 </body>
 

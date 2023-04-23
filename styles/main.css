@@ -25,7 +25,9 @@ h2,
 h3,
 h4 {
     font-family: 'Russo One', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
+    margin: 0;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 ul,
@@ -255,7 +257,12 @@ body {
 .footer-text {
     display: flex;
     flex-direction: column;
+    font-size: 28px;
+
+    margin-bottom: 20px;
 }
+
+
 
 .footer-text * {
     margin-bottom: 10px;
@@ -267,6 +274,10 @@ body {
 
 .footer a {
     display: block;
+}
+
+.footer-text a {
+    margin: 20px 0 0 0;
 }
 
 .maps-info__wrapper {
@@ -291,6 +302,7 @@ body {
 }
 
 .cancel-btn {
+    display: inherit;
     background-color: inherit;
     border: none;
     width: 50px;
@@ -322,8 +334,9 @@ body {
     top: calc(50% - 300px);
     left: calc(50% - 300px);
     padding: 20px;
+    z-index: 10;
 
-    display: flex;
+
     flex-direction: column;
 }
 
@@ -347,4 +360,44 @@ body {
 
 .send-data:hover {
     opacity: .8;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer nav {
+    text-align: center;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+
+}
+
+
+.footer-list a {
+    margin-right: 0;
+}
+
+.footer-list li:last-child {
+    margin-bottom: 0;
+}
+
+.footer img {
+    max-width: 400px;
+}
+
+.footer-logo > * {
+    margin-bottom: 40px;
+}
+
+.footer-logo > *:last-child {
+    margin-bottom: 0;
+}
+
+
+.footer h4 {
+    margin-bottom: 20px;
 }

@@ -53,12 +53,34 @@ function checkOption() {
 // Modal test
 
 
-let showModal = document.getElementById('showModal').addEventListener('click', showModalFunc)
+// let showModalBtn = document.getElementById('showModal').addEventListener('click', ()=> {
+//     console.log('test')
+//     let modalTest = document.getElementById('modalTest');
+//     if(!modalTest.style.cssText && modalTest.style.cssText == 'display:none') {
+//         modalTest.style.cssText = 'display:block';
+//     } else {
+//         modalTest.style.cssText = 'display:none';
+//     }
+// })
 
-let modalTest = document.getElementById('modalTest');
+function testingBtn() {
+    let modalTest = document.getElementById('modalTest');
 
-function showModalFunc() {
-    modalTest.style.cssText = 'display: block;';
+    if(!modalTest.style.cssText || modalTest.style.cssText === 'display:none') {
+        modalTest.style.cssText = 'display:block;';
+    } else {
+        modalTest.style.cssText = 'display:none;';
+    }
 }
+
+
+
+function error() {
+    alert('Страница "Мероприятия" ещё не доступна, мы скоро её добавим!')
+}
+
+
+
+
 
 
