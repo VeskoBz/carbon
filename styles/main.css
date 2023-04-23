@@ -1,5 +1,5 @@
 *,
-*+*,
+* + *,
 *::after,
 *::before {
     box-sizing: border-box;
@@ -20,11 +20,29 @@ h2 {
     margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Russo One', sans-serif;
+    font-weight: 200;
+}
+
 ul,
 li,
 ol {
     margin: 0;
     padding: 0;
+}
+
+.landing-page {
+    background-image: url("../assets/main-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-bottom: 30px;
+
+    height: 700px;
 }
 
 body {
@@ -40,34 +58,46 @@ body {
     line-height: 140%;
     color: #000000;
 
+    font-family: 'Ubuntu', sans-serif;
+
     overflow-x: hidden;
 
-    background-image: url("../assets/test-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    /*background-image: url("../assets/test-bg.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
 }
 
 .container {
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .header {
     background-color: #ffffff;
-    border-bottom: 1px solid #000000;
-    padding: 0 10px;
+    border-bottom: 1px solid #333333;
+    padding: 50px 0;
 }
 
 .header__container {
     max-width: 1920px;
     width: 100%;
+    padding: 0 20px;
     margin: 0 auto;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header-list__links a {
+    transition: .2s linear ;
+}
+
+.header-list__links a:hover {
+    opacity: .6;
 }
 
 .footer__container {
@@ -107,7 +137,7 @@ body {
 }
 
 .header-nav__link {
-    font-size: 30px;
+    font-size: 24px;
     margin-right: 64px;
 }
 
@@ -115,8 +145,40 @@ body {
     margin-right: 0;
 }
 
-.link-active {
-    text-decoration: underline !important;
+.header-buttons {
+    display: flex;
+}
+
+.header-btn {
+    color: black;
+    background-color: #c2e7d5;
+    padding: 10px 50px;
+    font-size: 24px;
+    transition: .3s linear;
+    margin-right: 10px;
+    border: none;
+}
+
+.header-btn:last-child {
+    margin-right: 0;
+}
+
+.sign-up__wrapper {
+    display: none;
+    max-width: 800px;
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: calc(50% - 400px);
+    left: calc(50% - 500px);
+    box-shadow: 10px 12px 1px black;
+    background-color: #c2e7d5;
+    border: none;
+}
+
+.header-btn:hover {
+    background-color: #809a8d;
+    color: #FFFFFF;
 }
 
 .page-title {
@@ -131,9 +193,8 @@ body {
 }
 
 
-
 .header-logo__img {
-    max-width: 200px;
+    max-width: 300px;
     width: 100%;
 }
 
@@ -145,6 +206,12 @@ body {
 
 .site-wrapper {
     margin-bottom: 81px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.site-wrapper-text {
+    margin-right: 20px;
 }
 
 .site-wrapper__title {
@@ -168,6 +235,7 @@ body {
     padding-left: 67px;
 }
 
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -179,8 +247,8 @@ body {
     background-color: #c2e7d5;
     padding: 27px 0 50px;
 
-    position: absolute;
-    bottom: 0;
+    /*position: absolute;*/
+    /*bottom: 0;*/
     width: 100%;
 }
 
@@ -199,4 +267,84 @@ body {
 
 .footer a {
     display: block;
+}
+
+.maps-info__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 80px 0;
+}
+
+.maps-info__wrapper p {
+    margin-bottom: 20px;
+}
+
+.maps-info__svg {
+    max-width: 700px;
+    width: 100%;
+    height: 361px;
+}
+
+.modal-test{
+
+}
+
+.cancel-btn {
+    background-color: inherit;
+    border: none;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+}
+
+.all-sites__link {
+    border: 1px solid #c2e7d5;
+    color: #73d5a3 !important;
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin: 20px 0 0 0;
+    display: inline-block;
+
+    transition: .3s linear;
+}
+
+.all-sites__link:hover {
+    opacity: .6;
+}
+
+.modal-test {
+    display: none;
+    background-color: #c2e7d5;
+    width: 600px;
+    /*height: 600px;*/
+    position: absolute;
+    top: calc(50% - 300px);
+    left: calc(50% - 300px);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cancel-input {
+    font-size: 20px;
+    max-width: 100%;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.send-data {
+    border: none;
+    background-color: #809a8d;
+    color: #FFFFFF;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    padding: 15px 0;
+}
+
+.send-data:hover {
+    opacity: .8;
 }

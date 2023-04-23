@@ -50,4 +50,15 @@ function checkOption() {
     console.log(observatoryText.style.cssText)
 }
 
+// Modal test
+
+
+let showModal = document.getElementById('showModal').addEventListener('click', showModalFunc)
+
+let modalTest = document.getElementById('modalTest');
+
+function showModalFunc() {
+    modalTest.style.cssText = 'display: block;';
+}
+
 
