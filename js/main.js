@@ -46,7 +46,6 @@ function checkOption() {
     }
 
 
-
     console.log(observatoryText.style.cssText)
 }
 
@@ -80,8 +79,8 @@ function hideModal() {
 
 }
 
-
-
 function error() {
     alert('Страница "Мероприятия" ещё не доступна, мы скоро её добавим!')
 }
+
+
