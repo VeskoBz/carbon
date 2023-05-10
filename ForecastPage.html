@@ -14,6 +14,7 @@
         rel="stylesheet">
 
   <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/forecast.css">
 
     <title>Прогноз погоды | Карбон-Поволжье</title>
 </head>
@@ -40,8 +41,8 @@
           <li>
             <a class="header-nav__link" href="./SitePage.html">Участки</a>
           </li>
-          <li onclick="error(event)">
-            <a class="header-nav__link" href="#">Прогноз погоды</a>
+          <li>
+            <a class="header-nav__link" href="#" style="text-decoration: #636F19 underline;">Прогноз погоды</a>
           </li>
         </ul>
       </nav>
@@ -49,7 +50,58 @@
   </div>
 </header>
   <div class="container">
+
     <main class="main">
+      <h2 class="block-title">Погода в регионах</h2>
+      <div class="weather-card__wrapper">
+        <div class="weather-card">
+          <div class="weather-temp-text">
+            Температура: <br>
+            <span class="temp">24</span>
+          </div>
+          <div class="weather-city-name-text">
+            Город:<br>
+            <span class="city-name"></span>
+          </div>
+          <div class="weather-weather-text">
+            Погода: <br>
+            <span class="weather"></span>
+          </div>
+          <div class="weather-pressure">
+            Давление: <br>
+            <span class="pressure"></span>
+          </div>
+        </div>
+        <div class="weather-card">
+          <div class="weather-temp-text">
+            Температура: <br>
+            <span class="temp-yo"></span>
+          </div>
+          <div class="weather-city-name-text">
+            Город:<br>
+            <span class="city-name-yo"></span>
+          </div>
+          <div class="weather-weather-text">
+            Погода: <br>
+            <span class="weather-yo"></span>
+          </div>
+        </div>
+        <div class="weather-region-text__wrapper">
+          <p class="weather-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores dignissimos dolorum earum in ipsum iste, itaque magni porro quasi quia quisquam repellendus similique sit sunt tempore vitae? Ducimus, nam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores dignissimos dolorum earum in ipsum iste, itaque magni porro quasi quia quisquam repellendus similique sit sunt tempore vitae? Ducimus, nam.</p>
+
+          <p class="weather-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores dignissimos dolorum earum in ipsum iste, itaque magni porro quasi quia quisquam repellendus similique sit sunt tempore vitae? Ducimus, nam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores dignissimos dolorum earum in ipsum iste, itaque magni porro quasi quia quisquam repellendus similique sit sunt tempore vitae? Ducimus, nam.</p>
+        </div>
+
+      </div>
+
+      <div class="graphics-block__wrapper">
+
+          <h2 class="block-title">Графики сравнения</h2>
+          <div class="graphics__wrapper">
+            <canvas id="myChart" class="separate-graphics"></canvas>
+            <canvas id="chart" class="separate-graphics"></canvas>
+          </div>
+      </div>
 
     </main>
   </div>
@@ -78,7 +130,7 @@
             <a class="header-nav__link" href="./SitePage.html">Участки</a>
           </li>
           <li>
-            <a class="header-nav__link" href="./SitePage.html">Прогноз погоды</a>
+            <a class="header-nav__link" href="./SitePage.html" style="text-decoration: #FFFFFF underline;">Прогноз погоды</a>
           </li>
         </ul>
       </nav>
@@ -98,6 +150,42 @@
     </div>
   </div>
 </footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+        integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="./js/weather.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.js"
+        integrity="sha512-vCUbejtS+HcWYtDHRF2T5B0BKwVG/CLeuew5uT2AiX4SJ2Wff52+kfgONvtdATqkqQMC9Ye5K+Td0OTaz+P7cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  const data = [{
+    month: 'Январь',
+    count: -20
+  }
+  ];
+
+  new Chart(
+          document.getElementById('chart'), {
+            type: 'bar',
+            data: {
+              labels: data.map(row => row.month),
+              datasets: [{
+                label: 'Средняя температура за полгода (по месяцам)',
+                data: data.map(row => row.count)
+              }, {
+                label: 'Средняя температура за полгода (по месяцам)',
+                data: data.map(row => row.count)
+              }]
+            }
+          }
+  );
+</script>
 
 </body>
 </html>
