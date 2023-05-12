@@ -1,6 +1,7 @@
 .weather-card {
     border: 1px solid #636F19;
-    text-align: center;
+    padding: 10px 20px;
+
     max-width: 250px;
     width: 100%;
     border-radius: 20px;
@@ -8,47 +9,26 @@
     margin-right: 20px;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
+
+.result {
+    font-size: 22px;
+    font-weight: 100;
+    color: #636F19;
+}
+
+.separate-graphics__description-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .weather-card:last-child {
     margin-right: 0;
 }
-.temp {
-    font-size: 30px;
-    margin: 10px 0;
-    display: inline-block;
-}
-
-.city-name {
-    font-size: 30px;
-    margin: 10px 0;
-    display: inline-block;
-}
-
-.weather {
-    font-size: 30px;
-    margin: 10px 0;
-    display: inline-block;
-}
-
-.temp-yo {
-    font-size: 30px;
-    margin: 10px 0;
-    display: inline-block;
-}
-
-.city-name-yo {
-    font-size: 30px;
-    margin: 10px 0;
-    display: inline-block;
-}
-
-.weather-yo {
-    font-size: 30px;
-    margin: 10px 0;
-    display: inline-block;
-}
+/*Styles to weather data*/
 
 .weather-card__wrapper {
     margin: 50px 0;
@@ -58,8 +38,9 @@
 
 
 canvas {
-    max-width: 900px !important;
-    width: 100% !important;
+    display: flex !important;
+    flex-shrink: 0 !important;
+    width: 900px !important;
     height: 500px !important;
 }
 
@@ -78,8 +59,25 @@ canvas:last-child {
 .graphics__wrapper {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+}
+
+.separate-graphic__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 50px;
 }
 
 .separate-graphics {
     width: 50%;
 }
+
+.forecast-btn {
+    display: inline-block;
+    max-width: 250px;
+    width: 100%;
+    text-align: center;
+}
+
+
